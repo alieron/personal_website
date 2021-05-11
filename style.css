@@ -1,0 +1,99 @@
+:root {
+  --clr-bg: hsl(207, 19%, 9%);
+  --clr-words: hsl(0, 0%, 100%);
+  --clr-accent: hsl(5, 58%, 48%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background: var(--clr-bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  color: var(--clr-words);
+  background-image: url("https://i.pinimg.com/564x/de/c1/89/dec18995e322a1cb2cb85cb5500e2a0e.jpg");
+  background-size: cover;
+  padding: 8rem 0 0;
+  max-width: 50ch;
+  border-radius: 0.75rem;
+
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.page:hover {
+  transform: scale(1.02);
+}
+
+.page-content {
+  padding: 1.5em;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.5) 5%,
+    hsl(0 0% 0% / 0.7)
+  );
+
+  transform: translateY(72%);
+  transition: transform 500ms ease;
+}
+
+.page-content > *:not(.title) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.page:hover .page-content > * {
+  opacity: 1;
+}
+
+.page:hover .page-content {
+  transform: translateY(0);
+}
+
+.title {
+  position: relative;
+  width: max-content;
+}
+
+/* Pseudo Element */
+.title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--clr-accent);
+
+  transform: scaleX(0);
+}
+
+.page:hover .title::after {
+  transform: scaleX(1);
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-bg);
+  background-color: var(--clr-accent);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-words);
+}
