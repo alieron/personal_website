@@ -13,14 +13,6 @@ body {
   overflow: hidden;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .main,
 .about,
 .projects {
@@ -38,11 +30,11 @@ body {
   font-size: 80px;
 }
 
-.main h1,
+/* .main h1,
 .about h1,
 .projects h1 {
   border: 1px solid red;
-}
+} */
 
 .main a .nav-button,
 .about a .nav-button,
