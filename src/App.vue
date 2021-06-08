@@ -1,5 +1,9 @@
 <template>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+  <transition name="slide">
+    <component :is="Component" />
+  </transition>
+</router-view>
 </template>
 
 <style>
@@ -40,16 +44,16 @@ body {
 .about a .nav-button,
 .projects a .nav-button {
   position: absolute;
-  fill: blue;
+  fill: cyan;
   height: 1em;
   margin: 0 0em;
 }
 
-.main a .nav-button #next,
+/* .main a .nav-button #next,
 .about a .nav-button #next,
 .projects a .nav-button #next {
   float: right;
-}
+} */
 
 .main .logo {
   height: 2em;
@@ -59,4 +63,31 @@ body {
   background-color: black;
   color: white;
 }
+
+/* Slide between pages, transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.75s ease-out;
+}
+
+.slide-enter-to {
+  position: absolute;
+  right: 0;
+}
+
+.slide-enter-from {
+  position: absolute;
+  right: -100%;
+}
+
+.slide-leave-to {
+  position: absolute;
+  left: -100%;
+}
+
+.slide-leave-from {
+  position: absolute;
+  left: 0;
+}
+
 </style>
