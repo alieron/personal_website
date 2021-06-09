@@ -6,6 +6,7 @@
           />
         </svg>
         <h1>Main</h1>
+        <p>Click the arrows to explore</p>
       </div>
 </template>
 

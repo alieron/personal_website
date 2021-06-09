@@ -95,6 +95,10 @@ body {
   height: 2em;
 }
 
+.main p {
+  font-size: 10px;
+}
+
 .about {
   background-color: black;
   color: white;
