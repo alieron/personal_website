@@ -7,17 +7,29 @@ const routes = [
   {
     path: '/',
     name: 'Main',
-    component: Main
+    component: Main,
+    meta: {
+      prev: null, 
+      next: 'About'
+    }
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: About,
+    meta: {
+      prev: 'Main',
+      next: 'Projects'
+    }
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects
+    component: Projects,
+    meta: {
+      prev: 'About', 
+      next: null
+    }
   }
 ]
 
