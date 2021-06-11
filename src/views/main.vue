@@ -16,10 +16,7 @@
   </div>
 </template>
 
-<script>
-export default {
-};
-</script>
+<script></script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
