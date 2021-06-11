@@ -9,6 +9,7 @@
       <div class="text-cont">
         <h1>I am</h1>
         <h1 class="name">Sebastien Leib</h1>
+        <h2><em>Student, Beginner Programmer</em></h2>
         <p>Click the arrows to explore</p>
       </div>
     </div>
@@ -31,7 +32,7 @@ export default {
   color: var(--clr-words-light);
 }
 
-.main .cont {
+.cont {
   height: 100vh;
 
   display: flex;
@@ -40,28 +41,55 @@ export default {
   font-family: "Roboto Mono", monospace;
 }
 
-.main .cont .logo:hover {
+.logo:hover {
   fill: var(--clr-accent);
   color: var(--clr-accent);
 }
 
-.main .cont .logo {
+.logo {
   height: 1em;
   fill: var(--clr-words-light);
   transition: fill 0.4s ease-out;
 }
 
-.main .cont .text-cont h1 {
+.text-cont {
+  width: 12ch;
+}
+
+.text-cont h1 {
   font-size: 0.6em;
 }
 
-.main .cont .text-cont .name {
+.text-cont .name {
+  position: relative;
+  width: max-content;
   background: var(--lngd-words-red);
   background-clip: text;
   color: transparent;
 }
 
-.main .cont .text-cont p {
+.text-cont .name::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--lngd-words-red);
+  transition: transform 0.4s ease-out;
+  transform: scaleX(0);
+}
+
+.text-cont:hover .name::after {
+  transform: scaleX(1);
+}
+
+
+.text-cont h2 {
+  font-size: 0.4em;
+}
+
+.text-cont p {
   font-size: 0.2em;
 }
 </style>
