@@ -57,8 +57,8 @@ export default {
 
 .main .cont .text-cont .name {
   background: var(--lngd-words-red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .main .cont .text-cont p {
