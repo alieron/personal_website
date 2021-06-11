@@ -44,16 +44,18 @@
 }
 
 .logo {
-  height: 1em;
+  height: 1.5em;
+  width: 4em;
   fill: var(--clr-words-light);
   transition: fill 0.4s ease-out;
 }
 
 .text-cont {
-  width: 12ch;
+  width: 15ch;
 }
 
 .text-cont h1 {
+  margin: 0;
   font-size: 0.6em;
 }
 
