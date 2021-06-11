@@ -38,17 +38,16 @@
   font-family: "Roboto Mono", monospace;
 }
 
-.logo:hover {
-  fill: var(--clr-accent);
-  color: var(--clr-accent);
-}
-
 .logo {
   height: 1.5em;
   width: 4em;
   fill: var(--clr-words-light);
   transition: fill 0.4s ease-out;
 }
+
+/* .logo:hover {
+  fill: var(--clr-accent);
+} */
 
 .text-cont {
   width: 15ch;
@@ -77,6 +76,7 @@
   background: var(--lngd-words-red);
   transition: transform 0.4s ease-out;
   transform: scaleX(0);
+  transform-origin: left;
 }
 
 .text-cont:hover .name::after {

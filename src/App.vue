@@ -19,7 +19,7 @@ import NavButton from '@/components/NavButton.vue';
 export default {
   data() {
     return {
-      direction: 'slide-right',
+      direction: null,
       viewport: {
         w: window.innerWidth,
         h: window.innerHeight,
@@ -46,12 +46,13 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
 :root {
-  --clr-bg-dark: #282c34;
+  --clr-bg-dark: #282c34; /*#34425a*/
   --clr-words-light: #f4f9ff;
   --clr-accent: #0094ea;
 
-  --lngd-bg-dark: linear-gradient(45deg, var(--clr-bg-dark), var(--clr-bg-dark) 45%, #34425a); 
-  --lngd-words-red: linear-gradient(36deg, #e4942c 0%, #e44156 100%);;
+  --lngd-bg-dark: linear-gradient(45deg, #252c38 0%, #252c38 35%, #33486b 100%); 
+  --lngd-words-red: linear-gradient(36deg, #e4942c 0%, #e44156 100%);
+  --lngd-accent-blue: linear-gradient(150deg, var(--clr-accent) 0%, #22c9f5 100%);;
 }
 
 body {
