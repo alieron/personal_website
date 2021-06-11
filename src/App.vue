@@ -3,7 +3,7 @@
 
   <NavButton @direction="setDirection"/>
   
-  <router-view v-slot="{ Component }">
+  <router-view v-slot="{ Component }" :viewport="viewport">
     <transition :name="direction">
       <component :is="Component" />
       <!-- <router-view /> -->
@@ -30,9 +30,28 @@ export default {
 
     };
   },
+  created() {
+    // update viewport
+    this.updateViewport();
+    // add resize listener
+    window.addEventListener('resize', this.updateViewport);
+    // add beforeunload listener, in case of refresh
+    window.addEventListener("beforeunload", () => window.scroll(0,0));
+  },
+
   methods: {
     setDirection(i) {
       this.direction = i
+    },
+    updateViewport() {
+      // update
+      this.viewport = {
+        w: window.innerWidth,
+        h: window.innerHeight,
+        is568: window.innerWidth <= 568,
+        is768: window.innerWidth <= 768,
+        is1024: window.innerWidth <= 1024,
+      }
     },
   },
   components: {
@@ -50,9 +69,13 @@ export default {
   --clr-words-light: #f4f9ff;
   --clr-accent: #0094ea;
 
-  --lngd-bg-dark: linear-gradient(45deg, #252c38 0%, #252c38 35%, #33486b 100%); 
+  --lngd-bg-main: linear-gradient(45deg, #252c38 0%, #252c38 35%, #33486b 100%);
+  --lngd-bg-about: linear-gradient(150deg, #2f4fa8 0%, #043d5e 100%);
   --lngd-words-red: linear-gradient(36deg, #e4942c 0%, #e44156 100%);
-  --lngd-accent-blue: linear-gradient(150deg, var(--clr-accent) 0%, #22c9f5 100%);;
+}
+
+html {
+  font-size: 80px;
 }
 
 body {
@@ -64,7 +87,6 @@ body {
   font-size: 80px;
 }
 
-.about,
 .projects {
   min-width: 100vw;
   height: 100vh;
@@ -81,15 +103,6 @@ body {
   border: 1px solid red;
 } */
 
-
-.main p {
-  font-size: 10px;
-}
-
-.about {
-  background-color: black;
-  color: white;
-}
 
 /* Slide between pages, transition */
 .slide-left-enter-active, 

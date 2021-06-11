@@ -25,6 +25,7 @@ export default {
   position: fixed;
   top: calc(50% - 0.4em);
   width: 100vw;
+  font-size: clamp(20px, 15vw, 80px);
 }
 
 .nav-btn {

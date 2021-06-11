@@ -4,4 +4,11 @@
       </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'Projects',
+  props: {
+    viewport: Object,
+    },
+}
+</script>
