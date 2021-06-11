@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
 .main {
@@ -36,72 +36,70 @@ export default {
   background: var(--lngd-bg-main);
   color: var(--clr-words-light);
   font-size: clamp(32px, 15vw, 80px);
-}
 
-.main .title-cont {
-  height: 100vh;
-  width: calc(100% - 3em);
 
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+  .title-cont {
+    height: 100vh;
+    width: calc(100% - 3em);
 
-.main .title-logo {
-  height: 120px;
-  width: 320px;
-  fill: var(--clr-words-light);
-  /* transition: fill 0.4s ease-out; */
-}
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-/* .logo:hover {
-  fill: var(--clr-accent);
-} */
+  .title-logo {
+    height: 120px;
+    width: 320px;
+    fill: var(--clr-words-light);
+    /* transition: fill 0.4s ease-out; */
+  }
 
-.main .title-text-cont {
-  font-family: "Roboto Mono", monospace;
-  width: max-content;
-}
+  /* .logo:hover {
+    fill: var(--clr-accent);
+  } */
 
-.main .title-text-cont h1 {
-  margin: 0;
-  font-size: 0.6em;
-}
+  .title-text-cont {
+    font-family: "Roboto Mono", monospace;
+    width: max-content;
+  
+  h1 {
+    margin: 0;
+    font-size: 0.6em;
+  }
+ .name {
+    position: relative;
+    width: max-content;
+    background: var(--lngd-words-red);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.4em;
+   
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: var(--lngd-words-red);
+      transition: transform 0.4s ease-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+  }
 
-.main .title-text-cont .name {
-  position: relative;
-  width: max-content;
-  background: var(--lngd-words-red);
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 0.4em;
-}
+  &:hover .name::after {
+    transform: scaleX(1);
+  }
 
-.main .title-text-cont .name::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: var(--lngd-words-red);
-  transition: transform 0.4s ease-out;
-  transform: scaleX(0);
-  transform-origin: left;
-}
+  h2 {
+    font-size: 0.4em;
+    margin: 0;
+  }
 
-.main .title-text-cont:hover .name::after {
-  transform: scaleX(1);
-}
-
-.main .title-text-cont h2 {
-  font-size: 0.4em;
-  margin: 0;
-}
-
-.main .title-text-cont p {
-  font-size: 0.2em;
-}
+  p {
+    font-size: 0.2em;
+  }}}
 
 @media only screen and (max-width: 768px) {
   .main .title-text-cont {
