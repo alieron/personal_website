@@ -22,17 +22,15 @@
 <script>
 export default {
     name: 'Header',
-    props: {
-        viewport: Object,
-    },
+    
 };
 </script>
 
-<style>
+<style lang="scss">
 .header {
   z-index: 100;
   position: fixed;
-  font-size: 32px;font-size: clamp(12.8px, 6vw, 32px);
+  font-size: clamp(12.8px, 6vw, 32px);
   margin: 0.5em 0;
   padding: 0.5em 0;
 
@@ -47,12 +45,12 @@ export default {
   height: 1em;
 }
 
-.social .icon1 {
+.icon1 {
   padding: 0 0.5em 0 0.875em;
 }
 
-.social .icon2 {
-  padding: 0 0.875em 0 0.5em;
+.icon2 {
+  padding: 0 0 0 0.5em;
 }
 
 .social .social-btn{
