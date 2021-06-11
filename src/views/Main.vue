@@ -9,7 +9,8 @@
       <div class="title-text-cont">
         <h1>I am</h1>
         <h1 class="name">Sebastien Leib</h1>
-        <h2><em>Student, Beginner Programmer</em></h2>
+        <h2><em>Student,</em></h2>
+        <h2><em>Beginner Programmer</em></h2>
         <p>Click the arrows to explore</p>
       </div>
     </div>
@@ -39,6 +40,7 @@ export default {
 
 .main .title-cont {
   height: 100vh;
+  width: calc(100% - 3em);
 
   display: flex;
   justify-content: space-around;
@@ -58,8 +60,7 @@ export default {
 
 .main .title-text-cont {
   font-family: "Roboto Mono", monospace;
-  width: 10ch;
-  margin-left: .2em;
+  width: max-content;
 }
 
 .main .title-text-cont h1 {
@@ -73,6 +74,7 @@ export default {
   background: var(--lngd-words-red);
   background-clip: text;
   color: transparent;
+  margin-bottom: 0.4em;
 }
 
 .main .title-text-cont .name::after {
@@ -94,9 +96,21 @@ export default {
 
 .main .title-text-cont h2 {
   font-size: 0.4em;
+  margin: 0;
 }
 
 .main .title-text-cont p {
   font-size: 0.2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .main .title-text-cont {
+    margin-left: 0.2em;
+    margin-right: 0.6em;
+  }
+
+  .main .title-cont {
+    width: 100vw;
+  }
 }
 </style>
