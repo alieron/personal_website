@@ -82,8 +82,8 @@ export default {
   --clr-accent: #0094ea;
 
   --lngd-bg-main: linear-gradient(45deg, #252c38 0%, #252c38 35%, #33486b 100%);
-  --lngd-bg-about: linear-gradient(150deg, #2f4fa8 0%, #043d5e 65%, #043d5e 100%);
-  --lngd-bg-projects: linear-gradient(105deg, #2b0069 0%, #3427bf 100%);
+  --lngd-bg-about: linear-gradient(150deg, #2f4fa8 0%, #043d5e 45%, #243b7c 100%);
+  --lngd-bg-projects: linear-gradient(105deg, #2b0069 0%, #3427bf 65%, #38067e 100%);
   --lngd-words-red: linear-gradient(36deg, #e4942c 0%, #e44156 100%);
 }
 

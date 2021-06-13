@@ -21,7 +21,7 @@
           </svg>
           <div class="title-text-cont">
             <h1>My projects,</h1>
-            <h2>Being a self-taught programmer, I pursue my interests by engaging in small projects, ranging from using Vue.js to make this website, to Tensorflow-Python to learn more about AI.</h2>
+            <h2>Being a self-taught programmer, I pursue my interests by engaging in small projects, ranging from using <strong>Vue.js</strong> to make this website, to <strong>Python-Tensorflow</strong> to learn more about AI.</h2>
             <h2>This section is a collection of noteworthy projects that I've completed, and the relevent skills I've learnt through them.</h2>
             <p>Scroll down to find out more</p>
           </div>
@@ -58,8 +58,8 @@ export default {
   }
 
   .title-shapes {
-    height: 8em;
-    width: 8em;
+    height: max-content;
+    width: 6em;
     fill: var(--clr-words-light);
     margin-left: 1em;
 
@@ -73,6 +73,9 @@ export default {
       }
       50% {
         opacity: 0;
+      }
+      99% {
+        opacity: 1;
       }
     }
   }
@@ -95,6 +98,12 @@ export default {
       margin: 0;
       line-height: 2.5;
       margin-top: 1em;
+
+      strong {
+        background: var(--lngd-words-red);
+        background-clip: text;
+        color: transparent;
+      }
     }
 
     p {

@@ -3,7 +3,7 @@
     <div class="title-cont">
       <div class="title-text-cont">
         <h1>About me,</h1>
-        <h2>Learning programming as a hobby has piqued my interests in Technology and its development, notably in the fields of Cybersecurity, Machine Learning(AI), Web Dev. and Cryptocurrency.</h2>
+        <h2>Learning programming as a hobby has piqued my interests in Technology and its development, notably in the fields of <strong>Cybersecurity</strong>, <strong>Machine Learning(AI)</strong>, <strong>Web Dev.</strong> and <strong>Cryptocurrency</strong>.</h2>
         <h2>This section is an overview of my accomplishments, the relevent skills I've picked up and experiences that I've had.</h2>
         <p>Scroll down to find out more</p>
       </div>
@@ -57,8 +57,7 @@ export default {
   }
 
   .title-shapes {
-    height: 8em;
-    width: 8em;
+    width: 6em;
     fill: var(--clr-words-light);
     margin-right: 1em;
   }
@@ -80,6 +79,12 @@ export default {
       margin: 0;
       line-height: 2.5;
       margin-top: 1em;
+
+      strong {
+        background: var(--lngd-words-red);
+        background-clip: text;
+        color: transparent;
+      }
     }
 
     p {
