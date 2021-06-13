@@ -35,8 +35,10 @@ export default {
     this.updateViewport();
     // add resize listener
     window.addEventListener('resize', this.updateViewport);
-    // add beforeunload listener, in case of refresh
     window.addEventListener("beforeunload", () => window.scroll(0,0));
+
+    // handle arrowkey presses for navigation
+    // window.addEventListener('keydown', this.keyHandler(i));
   },
 
   methods: {
@@ -53,6 +55,16 @@ export default {
         is1024: window.innerWidth <= 1024,
       }
     },
+    // keyHandler(i) {
+    //   switch (i.keycode) {
+    //     case 37: 
+    //       document.getElementById('prev-btn').click();
+    //       break;
+    //     case 39:
+    //       document.getElementById('next-btn').click();
+    //       break;
+    //   }
+    // },
   },
   components: {
     Header,
@@ -61,8 +73,8 @@ export default {
 }
 </script>
 
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,400&display=swap');
 
 :root {
   --clr-bg-dark: #282c34; /*#34425a*/
@@ -70,7 +82,8 @@ export default {
   --clr-accent: #0094ea;
 
   --lngd-bg-main: linear-gradient(45deg, #252c38 0%, #252c38 35%, #33486b 100%);
-  --lngd-bg-about: linear-gradient(150deg, #2f4fa8 0%, #043d5e 100%);
+  --lngd-bg-about: linear-gradient(150deg, #2f4fa8 0%, #043d5e 65%, #043d5e 100%);
+  --lngd-bg-projects: linear-gradient(105deg, #2b0069 0%, #3427bf 100%);
   --lngd-words-red: linear-gradient(36deg, #e4942c 0%, #e44156 100%);
 }
 
@@ -86,23 +99,6 @@ body {
   overflow-x: hidden;
   font-size: 80px;
 }
-
-.projects {
-  min-width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Roboto Mono", monospace;
-  font-size: 80px;
-}
-
-/* .main h1,
-.about h1,
-.projects h1 {
-  border: 1px solid red;
-} */
-
 
 /* Slide between pages, transition */
 .slide-left-enter-active, 
