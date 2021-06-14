@@ -83,7 +83,7 @@ export default {
   .title-text-cont {
     font-family: "Roboto Mono", monospace;
     width: 8em;
-    margin-left: 1em;
+    margin-right: 1em;
     // text-align: right;
   
     h1 {
