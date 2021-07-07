@@ -88,7 +88,7 @@ export default {
 }
 
 html {
-  font-size: 80px;
+  font-size: 64px;
 }
 
 body {
@@ -97,7 +97,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-size: 80px;
+  font-size: 64 px;
 }
 
 /* Slide between pages, transition */
@@ -146,5 +146,15 @@ body {
 .slide-left-leave-from {
   position: absolute;
   right: 0;
+}
+
+.disable-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
 }
 </style>
