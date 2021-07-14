@@ -1,5 +1,5 @@
 <template>
-  <Header :viewport="viewport"/>
+  <Header/>
 
   <NavButton @direction="setDirection"/>
   
@@ -88,7 +88,7 @@ export default {
 }
 
 html {
-  font-size: 64px;
+  font-size: 56px;
 }
 
 body {

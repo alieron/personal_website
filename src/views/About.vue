@@ -66,7 +66,7 @@ export default {
     height: 100vh;
     width: 100%;
 
-    background: var(--lngd-bg-about);
+    background: var(--lngd-bg-main);
     display: flex;
     justify-content: space-around;
     align-items: center;

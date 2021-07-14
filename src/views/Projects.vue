@@ -51,7 +51,7 @@ export default {
     height: 100%;
     width: 100%;
 
-    background: var(--lngd-bg-projects);
+    background: var(--lngd-bg-main);
     display: flex;
     justify-content: space-around;
     align-items: center;
